@@ -4,7 +4,7 @@ $baground_main_color: #fff;
 
 body {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  padding: 0;
+  margin: 0 auto;
 }
 
 /**************************************************************************
@@ -13,24 +13,24 @@ Header
 
 ********************************************************************/
 .header {
-  padding: 0 80px;
   background: $baground_main_color;
   box-shadow: 0px 0px 16px rgba(38, 38, 38, 0.16);
-  max-width: 956px;
+  margin-bottom: 16px;
+  
 
-  .header__main_menu {
+  .header__main_container {
+    height: 72px;
+    padding: 0 8px;
     display: flex;
-    justify-content: space-between;
-    flex-direction: row;
     align-items: center;
-
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 956px;
   }
 
-  .header__menu_container{
+  .header__menu_container {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    
   }
 
   .header__time__selector {
@@ -40,6 +40,7 @@ Header
     box-sizing: border-box;
     margin-right: 9px;
     -webkit-appearance:none;
+    padding-left: 13px;
   }
 
   .header__title {
@@ -53,7 +54,7 @@ Header
   }
 
   .title_input-container {
-    width: 292px;
+   /* width: 215px;*/
     height: 40px;
     border: 1px solid #E0E0E0;
     box-sizing: border-box;
@@ -112,9 +113,10 @@ Header
 /**************************************
 main
 ***************************************/
-.product {
-  padding: 32px 80px;
+.main {
   max-width: 956px;
+  margin: auto;
+  padding: 40px 0 80px;
 
   .search__appoin_btn {
     border: none;
@@ -129,6 +131,9 @@ main
 
   .search__input {
     border: none;
+    width: 100px;
+    font-size: 16px;
+    line-height: 24px;
   }
 }
 
@@ -164,6 +169,7 @@ product
   }
 
 }
+
 .product__cards_grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -173,16 +179,20 @@ product
 /*************************************
 foter
 **************************************/
-
-.footer__section {
-  max-width: 956px;
+.footer {
   background: #262626;
-  padding: 56px 80px;
+  height: 100%;
+
+
+  .footer__section {
+    padding-top: 56px;
+    max-width: 958px;
+    margin: 0 auto;
+  }
 
   .footer__logo-container {
-    padding-bottom: 40px;
     border-bottom: 1px solid $baground_main_color;
-    margin-bottom: 32px;
+    padding-bottom: 40px; 
   }
 
   .footer__button_lang {
@@ -193,6 +203,10 @@ foter
   }
 
   .footer__lang_drop-title {
+    display: block;
+    width: 227px;
+    height: 40px;
+    margin-left: 35px;
     -webkit-appearance: none;
     border: none;
     font-size: 13px;
@@ -203,7 +217,6 @@ foter
 
   .footer__button_lang {
     box-sizing: border-box;
-    padding: 0 8px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -229,6 +242,7 @@ foter
     grid-template-columns: 30% 30% 30%;
     height: 220px;
     border-bottom: 1px solid $baground_main_color;
+    padding-top: 32px;
   }
 
   .footer__link {
@@ -243,7 +257,8 @@ foter
 
   .footer__links-list_item {
     color:  $baground_main_color;
-    margin-bottom: 23px;
+    list-style: none;
+    padding-bottom: 23px;
   }
 
   .footer__app_container {
@@ -255,9 +270,11 @@ foter
   }
 
   .footer__bottom-links {
+    position: relative;
     display: grid;
     grid-template-columns: 37% 36% 31%;
     align-items: center;
+    height: 93px;
   }
 
   .footer__copy-n-links {
@@ -266,28 +283,33 @@ foter
   }
 
   .footer__back_btn {
-    position: fixed;
-    bottom: 24px;
-    right: 16px;
-    background: #59BD5A;
-    width: 80px;
-    height: 80px;
+    background: #59bd5a;
+    border-radius: 2px;
+    height: 64px;
+    width: 64px;
+    position: absolute;
+    top: 1865px;
+    right: 25px;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+  }
+
+  .footer__btn_app_container > a:first-child {
+    margin-right: 41px;
   }
 }
 
-@media screen and (max-width: 1023px) {
+@media (min-width: 640px ) and (max-width: 1022px) {
   .product__cards_grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px 16px;
+    display: grid;
     justify-content: center;
+    grid-template-columns: 49.9% 49.9%;
   }
 }
 
-@media screen and (max-width: 640px) {
+@media (max-width: 638px) {
 
   .product__cards_grid {
     display: grid;
