@@ -4,204 +4,304 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="src/css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap&subset=cyrillic" rel="stylesheet">
   <title>Uber Eats</title>
 </head>
 <body>
-<header class="header">
-  <section class="header__main_container">
-    <a href="#"><img src="images/logo.png" alt="link to page Uber Eats" class="header__Uber_logo"></a>
-    <form 
-      class="header__menu_container hidden_menu" 
-      action="https://mate-academy-form-lesson.herokuapp.com/create-application" 
-      method="post" 
-      autocomplete="off"
-    >
-      <select name="time_select header__appoin_style" id="time_select" class="header__time__selector">
-        <option value="now" selected>ASAP</option>
-        <option value="plan">ASAP</option>
-        <option value="plan">UberEats</option>
-    </form>
-    </select>
-      <div class="header__deliver_to">
-        <span class="header__title">to</span>
-        <div class="title_input-container">
-          <button class="title_btn abs_btn"><img src="images/location.png" alt="location"></button>
-          <input type="text" class="header__title_input appoin_style" placeholder="ul. Tarasivska St, 16">
-        </div>
-      </div>
-    <div class="header__btn-container">
-      <a href="#" class="header__btn header_btn-sign_in">Sign In</a>
-      <a href="#" class="header__btn header_btn-regist">Register</a>
-      <a href="#" class="header__btn-basket"><img src="images/basket.png" alt="basket"></a>
-    </div>
-  </section>
-</header>
+  <header class="header" id="header">
+    <div class="header__container">
+      <a href="#" class="header__logo"><img src="src/images/logo.png" alt="Uber eats"></a>
 
-<main class="main">
-  
-  <div class="search__container">
-    <button class="search__appoin_btn">
-      <img src="images/search.png" alt="search_btn">
-    </button>
-    <input type="text" class="search__input" placeholder="Search for restaurant or cuisine">
-  </div>
-<div class="hidden_menu">
-    <form class="destination_container" action="https://mate-academy-form-lesson.herokuapp.com/create-application" method="post" autocomplete="off">
-      <span class="dest">When</span>
-  <select name="time_select dest_style" id="time_select-2" class="time__selector">
-    <option value="now" selected>ASAP</option>
-    <option value="plan">Schedule</option>
-  </select>
-  <span class="dest"> To: </span>
-  <input type="text" name="adress" class="destination_input dest_style" id="delivery_place-2" value="ul. Tarasivska St, 16">
-</form>
-
-</div>
-  
-<h1 class="section_products_title">Kyiv Restaurants</h1>
-  <section class="product__cards_grid">
-    <article class="product__card">
-      <a href="#"><img class="product__card-img move-up" src="images/card_1.png" alt=""></a>
-      <p class="product__card-name">Макдоналдс — Газетный</p>
-      <p class="product__card-class">₴₴ • Бургеры</p>
-      <p class="product__card-delivery_time">25 - 35 Min</p>
-    </article>
-    <article class="product__card">
-      <a href="#"><img class="product__card-img" src="images/card_2.png" alt=""></a>
-      <p class="product__card-name">DimSum & Co — ЦДМ</p>
-      <p class="product__card-class">₴ • Японская • Китайская • Азиатская</p>
-      <p class="product__card-delivery_time">40 - 50 Min</p>
-    </article>
-    <article class="product__card">
-      <a href="#"><img class="product__card-img" src="images/card_3.png" alt=""></a>
-      <p class="product__card-name">ДвижОК — Манежная</p>
-      <p class="product__card-class">₴ • Американская • Европейская</p>
-      <p class="product__card-delivery_time">35 - 45 Min</p>
-    </article>
-    <article class="product__card">
-      <a href="#"><img class="product__card-img" src="images/card_4.png" alt=""></a>
-      <p class="product__card-name">НЯ — NHA</p>
-      <p class="product__card-class">₴₴ • Вьетнамская</p>
-      <p class="product__card-delivery_time">30 - 40 Min</p>
-    </article>
-
-    <article class="product__card show_card">
-      <a href="#"><img class="product__card-img" src="images/card_5.png" alt="card"></a>
-      <p class="product__card-name">Точка Дзы — Цветной</p>
-      <p class="product__card-class">₴₴ • Вьетнамская</p>
-      <p class="product__card-delivery_time">40 - 50 Min</p>
-    </article>
-    <article class="product__card show_card">
-      <a href="#"><img class="product__card-img" src="images/card_6.png" alt="card"></a>
-      <p class="product__card-name">Cinnabon</p>
-      <p class="product__card-class">₴ • Выпечка • Десерты • Капкейки</p>
-      <p class="product__card-delivery_time">30 - 40 Min</p>
-    </article>
-    <article class="product__card show_card">
-      <a href="#"><img class="product__card-img" src="images/card_7.png" alt="card"></a>
-      <p class="product__card-name">PIZZELOVE</p>
-      <p class="product__card-class">₴₴ • Пицца</p>
-      <p class="product__card-delivery_time">15 - 25 Min</p>
-    </article>
-    <article class="product__card show_card">
-      <a href="#"><img class="product__card-img" src="images/card_8.png" alt="card"></a>
-      <p class="product__card-name">Zю кафе — Тверская</p>
-      <p class="product__card-class">₴₴ • Японская</p>
-      <p class="product__card-delivery_time">25 - 35 Min</p>
-    </article>
-    <article class="product__card show_card">
-      <a href="#"><img class="product__card-img" src="images/card_9.png" alt="card"></a>
-      <p class="product__card-name">Bar BQ Cafe — Манежная</p>
-      <p class="product__card-class">₴₴₴ • Европейская</p>
-      <p class="product__card-delivery_time">30 - 40 Min</p>
-    </article>
-  </section>
-</main>
-
-<footer class="footer">
-  <section class="footer__section">
-    <div class="footer__logo-container">
-      <img src="images/white-logo.svg" alt="Uber Eats">
-    </div>
-    <div class="footer__line_block div_underline"></div>
-    <article class="footer__grid-container">
-      <article class="footer__col-1">
-        <div class="footer__language_drop-container">
-          <form class="footer__button_lang footer__lang_drop" 
-          action="https://mate-academy-form-lesson.herokuapp.com/create-application" 
-          method="post" 
-          autocomplete="off"
-          >
-            <img class="footer__lang_img" src="images/planet.png" alt="language">
-            <select name="lang" id="lang_select" class="footer__lang_drop-title">
-              <option class="lang_drop" value="en" selected>POLISH</option>
-              <option class="lang_drop" value="ua">CHOTLAND</option> 
-              <option class="lang_drop" value="ua">CHOTLAND</option>              
+      <form action="/" class="adress-delivery adress-delivery__header">
+          <span>When</span>
+          <span>To</span>
+          <label for="destination-details">
+            <select name="" id="destination-details" class="adress-delivery__destination-details">
+              <option value="ASAP">ASAP</option>
             </select>
-            <img class="footer__lang_img" src="images/drop.png" alt="upp">
-          </form>
-        </div>
-        
-        <div class="footer__socials_container">
-          <p class="footer__hash_tag"><span class="footer__hash">#</span>UberEats</p>
-          <div>
-            <a class="footer__soc_link" href="#"><img src="images/Shape.png" alt="facebook"></a>
-            <a class="footer__soc_link" href="#"><img src="images/twitter.png" alt="twitter"></a>
-            <a class="footer__soc_link" href="#"><img src="images/instagram.png" alt="instagram"></a>
-          </div>
-        </div>
-      </article>
+          </label>
+          <label for="search">
+            <input type="text" id="search" class="adress-delivery__search" placeholder="ul. Bolshaya Dmitrovka,22 ">
+          </label>
+        </form>
 
-      <div class="footer__links-container">
-        <ul class="footer__links-list">
-          <li class="footer__links-list_item">
-            <a href="#" class="footer__link">About UberEats</a>
-          </li>
-          <li class="footer__links-list_item">
-            <a href="#" class="footer__link">Become a Delivery Partner</a>
-          </li>
-          <li class="footer__links-list_item">
-            <a href="#" class="footer__link">Become a Restaurant Partner</a>
-          </li>
-        </ul>
+      <div class="sign-delivery-and-basket-container">
+        <div class="sign-delivery">
+          <a href="" class="sign-delivery__button sign-delivery__button__sign-in">Sign in</a>
+          <a href="" class="sign-delivery__button sign-delivery__button__register">Register</a>
+        </div>
+        <a class="header__basket"><img src="src/images/basket.png" alt="basket"></a>
       </div>
-      <div class="footer__details">
-        <ul class="footer__links-list">
-          <li class="footer__links-list_item">
-            <a href="#" class="footer__link">See all cities</a>
-          </li>
-          <li class="footer__links-list_item">
-            <a href="#" class="footer__link">Pricing</a>
-          </li>
-          <li class="footer__links-list_item">
-            <a href="#" class="footer__link">Help</a>
-          </li>
-          <li class="footer__links-list_item">
-            <a href="#" class="footer__link">FAQs</a>
-          </li>
-        </ul>
-      </div>
-    </article>
-
-    <div class="footer__app_container">
-      <div class="footer__line_block"></div>
-      <div class="footer__btn_app_container">
-        <a href="#"><img src="images/Group.png" alt="appstore"></a>
-        <a href="#"><img src="images/en_badge_web_generic-cf6dad406f.png" alt=""></a>
-      </div>
-      <div class="footer__line_block"></div>
     </div>
-    <article class="footer__bottom-links">
-      <p class="footer__copy-n-links">© 2017 Uber Technologies Inc.</p>
-      <a class="footer__copy-n-links" href="#">Privacy</a>
-      <a class="footer__copy-n-links" href="#">Terms</a>
-    </article>
-    <a class="footer__back_btn" href="#"><img src="images/direct.svg" alt="dir"></a>
-  </section>
-</footer>
-</body>
-</html>
+  </header>
+  <main class="main">
+    <div class="main__container">
 
+      <form action="/" class="product-search-delivery">
+        <label for="product-search-delivery__field">
+          <input type="search" 
+                class="product-search-delivery__field" 
+                id="product-search-delivery__field" 
+                placeholder="Search product or cuisine">
+        </label>
+      </form>
+
+      <form action="/" class="adress-delivery adress-delivery__main">
+        <span>When</span>
+        <span>To</span>
+        <label for="destination-details">
+          <select name="" id="destination-details" class="adress-delivery__destination-details">
+            <option value="ASAP">ASAP</option>
+          </select>
+        </label>
+        <label for="search">
+          <input type="text" id="search" class="search" placeholder="ul. Bolshaya Dmitrovka,22 ">
+        </label>
+      </form>
+
+      <section class="catalog">
+        <h1 class="catalog-header">Moscow products</h1>
+        <div class="catalog__container">
+          <section class="product">
+            <a href="" class="product__photo"><img src="src/images/card_1.png" alt=""></a>
+            <div class="product__hiden_details">
+            <h2 class="product__name">Макдоналдс</h2>
+            <ul class="product__categories">
+              <li class="product__categories__item">₴₴ • Бургеры</li>
+            </ul>
+            <p class="product__details">25 - 35 Min</p>
+          </div>
+            <div class="hidding__product_details">
+            <h2 class="product__name">Макдоналдс — Газетный</h2>
+            <ul class="product__categories">
+              <li class="product__categories__item">₽₽ • Бургеры</li>
+            </ul>
+            <p class="product__details">25 - 30 Min</p>
+          </div>
+          </section>
+
+          <section class="product">
+            <a href="" class="product__photo"><img src="src/images/card_2.png" alt=""></a>
+            <div class="product__hiden_details">
+                <h2 class="product__name">WOKWEI</h2>
+                <ul class="product__categories">
+                  <li class="product__categories__item">₴ • Китайська • Азіатська</li>
+                </ul>
+                <p class="product__details">40 - 50 Min</p>
+              </div>
+                <div class="hidding__product_details">
+                <h2 class="product__name">DimSum & Co — ЦДМ</h2>
+                <ul class="product__categories">
+                  <li class="product__categories__item">₽ • Японская • Китайская • Азиатская</li>
+                </ul>
+                <p class="product__details">40 - 50 Min</p>
+              </div>
+          </section>
+
+          <section class="product">
+            <a href="" class="product__photo"><img src="src/images/card_3.png" alt=""></a>
+            <div class="product__hiden_details">
+                <h2 class="product__name">YIZHA</h2>
+                <ul class="product__categories">
+                  <li class="product__categories__item">₴₴ • Американська • Бургери • Вулична їжа</li>
+                </ul>
+                <p class="product__details">35 - 45 Min</p>
+              </div>
+                <div class="hidding__product_details">
+                <h2 class="product__name">ДвижОК — Манежная</h2>
+                <ul class="product__categories">
+                  <li class="product__categories__item">₽ • Американская • Европейская</li>
+                </ul>
+                <p class="product__details">35 - 45 Min</p>
+              </div>
+          </section>
+
+          <section class="product">
+            <a href="" class="product__photo"><img src="src/images/card_4.png" alt=""></a>
+            <div class="product__hiden_details">
+                <h2 class="product__name">Musafir (вул. Саксаганського)</h2>
+                <ul class="product__categories">
+                  <li class="product__categories__item">₴₴ • Близькосхідна</li>
+                </ul>
+                <p class="product__details">30 - 40 Min</p>
+              </div>
+                <div class="hidding__product_details">
+                <h2 class="product__name">НЯ — NHA</h2>
+                <ul class="product__categories">
+                  <li class="product__categories__item">₽₽ • Вьетнамская</li>
+                </ul>
+                <p class="product__details">30 - 40 Min</p>
+              </div>
+          </section>
+
+          <section class="product">
+            <a href="" class="product__photo"><img src="src/images/card_5.png" alt=""></a>
+            <div class="product__hiden_details">
+                <h2 class="product__name">WOKWEI</h2>
+                <ul class="product__categories">
+                  <li class="product__categories__item">₴ • Китайська • Азіатська</li>
+                </ul>
+                <p class="product__details">40 - 50 Min</p>
+              </div>
+                <div class="hidding__product_details">
+                <h2 class="product__name">Точка Дзы — Цветной</h2>
+                <ul class="product__categories">
+                  <li class="product__categories__item">₽₽ • Вьетнамская</li>
+                </ul>
+                <p class="product__details">40 - 50 Min</p>
+              </div>
+          </section>
+
+          <section class="product">
+            <a href="" class="product__photo"><img src="src/images/card_6.png" alt=""></a>
+            <div class="product__hiden_details">
+                <h2 class="product__name">Milk Bar</h2>
+                <ul class="product__categories">
+                  <li class="product__categories__item">₴₴ • Десерти • Європейська</li>
+                </ul>
+                <p class="product__details">25 - 35 Min</p>
+              </div>
+                <div class="hidding__product_details">
+                <h2 class="product__name">Cinnabon</h2>
+                <ul class="product__categories">
+                  <li class="product__categories__item">₽ • Выпечка • Десерты • Капкейки</li>
+                </ul>
+                <p class="product__details">25 - 35 Min</p>
+              </div>
+          </section>
+
+          <section class="product">
+            <a href="" class="product__photo"><img src="src/images/card_7.png" alt=""></a>
+            <div class="product__hiden_details">
+                <h2 class="product__name">Mimosa Brooklyn Pizza</h2>
+                <ul class="product__categories">
+                  <li class="product__categories__item">₴₴ • Італійська • Піца • Американська</li>
+                </ul>
+                <p class="product__details">15 - 25 Min</p>
+              </div>
+                <div class="hidding__product_details">
+                <h2 class="product__name">PIZZELOVE</h2>
+                <ul class="product__categories">
+                  <li class="product__categories__item">₽₽ • Пицца</li>
+                </ul>
+                <p class="product__details">15 - 25 Min</p>
+              </div>
+          </section>
+
+          <section class="product">
+            <a href="" class="product__photo"><img src="src/images/card_8.png" alt=""></a>
+            <div class="product__hiden_details">
+                <h2 class="product__name">To Be</h2>
+                <ul class="product__categories">
+                  <li class="product__categories__item">₴₴ • Японська • Азіатська • Суші</li>
+                </ul>
+                <p class="product__details">25 - 35 Min</p>
+              </div>
+                <div class="hidding__product_details">
+                <h2 class="product__name">Zю кафе — Тверская</h2>
+                <ul class="product__categories">
+                  <li class="product__categories__item">₽₽ • Японская</li>
+                </ul>
+                <p class="product__details">25 - 35 Min</p>
+              </div>
+          </section>
+          
+          <section class="product">
+            <a href="" class="product__photo"><img src="src/images/card_9.png" alt=""></a>
+            <div class="product__hiden_details">
+                <h2 class="product__name">Druzi Cafe (вул. Прорізна)</h2>
+                <ul class="product__categories">
+                  <li class="product__categories__item">₴₴ • Американська • Сучасна європейська • У...</li>
+                </ul>
+                <p class="product__details">30 - 40 Min</p>
+              </div>
+                <div class="hidding__product_details">
+                <h2 class="product__name">Bar BQ Cafe — Манежная</h2>
+                <ul class="product__categories">
+                  <li class="product__categories__item">₽₽₽ • Европейская</li>
+                </ul>
+                <p class="product__details">25 - 30 Min</p>
+              </div>
+          </section>
+
+            
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+
+  <footer class="footer">
+    <div class="footer__container">
+    <a href="#!" class="footer__logo">
+      <img src="src/images/white-logo.svg" alt="Uber eats">
+    </a>
+    <hr class="hr">
+
+    <section class="footer__nav">
+      <div class="column-1">
+        <form class="footer__nav-lang">
+          <select class="footer__nav-lang-input">
+            <option class="footer__nav-lang-input" value="РУССКИй">РУССКИЙ</option>
+            <option class="footer__nav-lang-input" selected value="ENGLISH">ENGLISH</option>
+            <option class="footer__nav-lang-input" value="УКРАЇНСЬКА">УКРАЇНСЬКА</option>
+          </select>
+        </form>
+    
+        <p class="footer__nav-name">
+          <span class="footer__nav-name-hash">#</span>
+          <span class="footer__nav-name-name">UberEats</span>
+        </p>
+        
+        <section class="footer__nav-social">
+          <a class="social link" href="/images/facebook.svg">
+            <img src="src/images/facebook.svg" alt="facebook-icon">
+          </a>
+          <a class="social link" href="https://twitter.com">
+            <img src="src/images/twitter.png" alt="twitter-icon">
+          </a>
+          <a class="social link" href="https://instagram.com">
+            <img src="src/images/instagram.png" alt="instagram-icon">
+          </a>
+        </section>
+      </div>
+
+      <div class="column-2">
+        <a class="link" href="#!">About UberEats</a>
+        <a class="link" href="#!">Become a Delivery Partner</a>
+        <a class="link" href="#!">Become a Restaurant Partner</a>
+      </div>
+
+      <div class="column-3">
+        <a class="link" href="#!">See all cities</a>
+        <a class="link" href="#!">Pricing</a>
+        <a class="link" href="#!">Help</a>
+        <a class="link" href="#!">FAQs</a>
+      </div>
+    </section>
+    <hr class="hr">
+
+    <section class="footer__app">
+      <a class="appstore" href="https://www.apple.com/downloads/index.html" target="_blank">
+        <img src="src/images/en_badge_web_generic-cf6dad406f.png" alt="appstore-icon">
+      </a>
+
+      <a class="gplay" href="https://play.google.com/store/apps?hl=ru" target="_blank">
+        <img src="src/images/Group.png" alt="googleplay-icon">
+      </a>
+    </section>
+    <hr class="hr">
+
+    <section class="footer__rights">
+      <p>© 2019 Uber Technologies Inc.</p>
+      <a class="link" href="#!">Privacy</a>
+      <a class="link" href="#!">Terms</a>
+    </section>
+
+    <a href="#to-top" class="arrow-to-top"></a>
+  </div>
+  </footer>
+</body>
 </html>
