@@ -21,9 +21,10 @@
               <option value="ASAP">ASAP</option>
             </select>
           </label>
-          <label for="search">
-            <input type="text" id="search" class="adress-delivery__search" placeholder="ul. Bolshaya Dmitrovka,22 ">
-          </label>
+          <div class="search__container ">
+            <button class="dest_btn abs_btn"><img src="src/images/location.png" alt="location"></button>
+            <input type="text" class="destination_input dest_style" placeholder="ul. Tarasivska St, 16">
+          </div>
         </form>
 
       <div class="sign-delivery-and-basket-container">
@@ -39,12 +40,12 @@
     <div class="main__container">
 
       <form action="/" class="product-search-delivery">
-        <label for="product-search-delivery__field">
-          <input type="search" 
-                class="product-search-delivery__field" 
-                id="product-search-delivery__field" 
-                placeholder="Search product or cuisine">
-        </label>
+        <div class="search_container">
+            <button class="dest_btn">
+              <img src="src/images/search.png" alt="search_btn">
+            </button>
+            <input type="text" class="search_input" placeholder="Search for restaurant or cuisine">
+          </div>
       </form>
 
       <form action="/" class="adress-delivery adress-delivery__main">
@@ -55,9 +56,10 @@
             <option value="ASAP">ASAP</option>
           </select>
         </label>
-        <label for="search">
-          <input type="text" id="search" class="search" placeholder="ul. Bolshaya Dmitrovka,22 ">
-        </label>
+        <div class="search__container">
+          <button class="dest_btn abs_btn"><img src="src/images/location.png" alt="location"></button>
+          <input type="text" class="destination_input dest_style" placeholder="ul. Tarasivska St, 16">
+        </div>
       </form>
 
       <section class="catalog">
@@ -242,13 +244,17 @@
 
     <section class="footer__nav">
       <div class="column-1">
-        <form class="footer__nav-lang">
-          <select class="footer__nav-lang-input">
-            <option class="footer__nav-lang-input" value="РУССКИй">РУССКИЙ</option>
-            <option class="footer__nav-lang-input" selected value="ENGLISH">ENGLISH</option>
-            <option class="footer__nav-lang-input" value="УКРАЇНСЬКА">УКРАЇНСЬКА</option>
-          </select>
-        </form>
+          <form class="footer__nav-lang">
+          <div class="footer__dropdown footer__lang_drop">
+            <span class="footer__lang_drop-title"><img src="src/images/planet.png" alt="">ENGLISH <img src="src/images/drop.png" alt=""></span>
+            <div class="footer__dropdown-content">
+            <ul class="footer__dropdown-content_list">
+              <li class="footer__dropdown-content_list-item"><a class="dropdown_link" href="#">РУССКИЙ</a></li>
+              <li class="dropdown-content_list-item"><a class="dropdown_link" href="#">УКРАЇНСЬКА</a></li>
+            </ul>
+          </div>
+        </div>
+      </form>
     
         <p class="footer__nav-name">
           <span class="footer__nav-name-hash">#</span>
@@ -300,7 +306,7 @@
       <a class="link" href="#!">Terms</a>
     </section>
 
-    <a href="#to-top" class="arrow-to-top"></a>
+    <a href="#" class="arrow-to-top"><img src="src/images/direct.svg" alt=""></a>
   </div>
   </footer>
 </body>

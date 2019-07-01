@@ -4,12 +4,12 @@ $color-gray-light: #e0e0e0;
 .footer {
     padding: 56px 81px 40px;
     background: #262626;
-    position: relative;
     
     &__container {
       margin: auto;
       max-width: 956px;
       padding: 0 5px;
+      position: relative;
     }
   
     &__logo {
@@ -22,51 +22,52 @@ $color-gray-light: #e0e0e0;
       padding: 32px 0 48px;
     }
     
-    &__nav-lang {
+    &__dropdown {
+      box-sizing: border-box;
       position: relative;
-      width: fit-content;
-      cursor: pointer;
-    }
-    
-    &__nav-lang::before {
-      content: "";
-      display: block;
-      position: absolute;
-      background: url(src/images/planet.png) center no-repeat;
-      width: 16px;
-      height: 16px;
-      top: 12px;
-      left: 16px;
-    }
-    
-    &__nav-lang::after {
-      content: "";
-      display: block;
-      position: absolute;
-      background: url(src/images/drop.png) center no-repeat;
-      width: 14px;
-      height: 8px;
-      top: 16px;
-      right: 8px;
-      cursor: pointer;
-    }
-    
-    &__nav-lang-input {
-      -webkit-appearance: none;
-      width: 227px;
-      height: 40px;
+      display: inline-block;
+      width: 65px;
+    } 
+
+    &__lang_drop {
       background: #3b3b3b;
-      border: 0;
       border-radius: 2px;
-      padding: 12px 48px;
-      color: $color-white;
+      box-sizing: border-box;
+      position: relative;
+      display: inline-block;
+      width: 173px;
+      margin-bottom: 32px;
     }
-    
-    &__nav-lang-input::placeholder {
+
+    &__lang_drop-title {
       font-size: 13px;
-      font-weight: normal;
-      line-height: 15px;
-      color: $color-white;
+      line-height: 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 8px;
+    }
+
+    &__dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+      padding: 12px 16px;
+      z-index: 1;
+    }
+
+    &__dropdown-content_list {
+      margin: 0;
+      list-style: none;
+      padding: 0;
+    }
+
+    &__dropdown-content_list-item {
+      text-align: left;
+      font-size: 13px;
+      line-height: 24px;
+      padding: 8px 24px;
     }
   
     &__nav-name {
@@ -125,6 +126,15 @@ $color-gray-light: #e0e0e0;
       color: $color-white;
     }
   }
+
+.footer__dropdown:hover .footer__dropdown-content {
+  display: block;
+}
+
+.dropdown_link {
+  text-decoration: none;
+  color: #1d1d1d;
+}
   
 .link {
   text-decoration: none;
@@ -177,25 +187,18 @@ input[class="main-content__search-form"] {
 }
 
 .arrow-to-top {
-  width: 80px;
-  height: 80px;
-  position: absolute;
-  background-color: #59bd5a;
+  background: #59bd5a;
   border-radius: 2px;
+  height: 64px;
+  width: 64px;
+  position: absolute;
+  bottom: 0;
   right: 16px;
-  bottom: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.arrow-to-top::after {
-    content: "";
-    display: block;
-    position: absolute;
-    background: url(src/images/direct.svg) center no-repeat;
-    width: 16px;
-    height: 25px;
-    bottom: 28px;
-    right: 32px;
-  }
 
   @media (max-width: 1023px) {
     .footer {

@@ -17,17 +17,24 @@ product
   
   margin-bottom: 24px;
   
-  label[for="product-search-delivery__field"] {
-    display: flex;
+  .search_container {
+    font-family: Roboto, sans-serif;
+    font-size: 13px;
+    line-height: 24px;
+    vertical-align: center;
     border-bottom: 1px solid #757575;
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
   }
-
-  label[for="product-search-delivery__field"]:before {
-    content: "";
-    display: block;
-    background: url('images/location.png') no-repeat center;
-    height: $search-height;
-    width: $search-height;
+  
+  .search_input {
+    width: 100%;
+    border: 0;
+    opacity: 50%;
+    line-height: 56px;
+    padding-left: 8px;
+    position: relative;
   }
 
   &__field {
