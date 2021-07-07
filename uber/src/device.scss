@@ -1,0 +1,87 @@
+/*******************************************************************
+device
+******************************************************/
+.adress-delivery {
+    &__destination-details {
+      appearance: none;
+      height: 40px;
+      padding: 0 12px;
+      border: 1px solid #E0E0E0;
+    }
+  
+    label[for="search"] {
+      display: flex;
+      border: 1px solid #E0E0E0;
+      box-sizing: border-box;
+      height: 40px;
+    }
+  
+    label[for="search"]:before {
+      content: "";
+      height: 40px;
+      width: 40px;
+      display: block;
+      background: url('images/location.png') no-repeat center;
+    }
+  
+    &__search {
+      width: 100%;
+      padding-right: 8px;
+      box-sizing: border-box;
+    }
+  
+    span {
+      font-size: 11px;
+    }
+  }
+  
+  .adress-delivery__main {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    column-gap: 15px;
+    width: 100%;
+  
+    .search {
+      border-style: none;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+  
+  .adress-delivery__header {
+    margin: 0 20px;
+    display: none;
+    grid-template-columns: auto auto 1fr;
+    column-gap: 10px;
+    align-items: center;
+    span:nth-child(1) {
+      display: none;
+    }
+  
+    span:nth-child(2) {
+      font-size: 13px;
+      text-transform: lowercase;
+      grid-column-start: 2;
+      grid-row-start: 1;
+    }
+  
+    label[for="shipping-details"] {
+      grid-column-start: 1;
+    }
+    
+    label[for="search"] {
+      grid-column-start: 3;
+    }
+  }
+  
+  @media (min-width: 640px) {
+    .adress-delivery__header {
+      display: grid;
+    }
+  
+    .adress-delivery__main {
+      display: none;
+    }
+  }
+  
